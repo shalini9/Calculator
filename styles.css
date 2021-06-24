@@ -31,9 +31,9 @@ nav h1 {
   justify-content: center;
 }
 .calculator .calc__display input {
-  background-color: black;
+  background-color: #1C1C1C;
   padding: 0.5em;
-  font-size: 5em;
+  font-size: 5.5em;
   text-align: right;
   width: 100%;
   color: #FFFFFF;
@@ -46,7 +46,7 @@ nav h1 {
   grid-template-rows: repeat 5, 1fr;
   width: 100%;
 }
-.calc__buttons .c {
+.calc__buttons .clear__btn {
   grid-column: 1/2;
   grid-row: 1/2;
 }
@@ -58,7 +58,7 @@ nav h1 {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-.calc__buttons .divide {
+.calc__buttons .divide__btn {
   grid-column: 4/5;
   grid-row: 1/2;
 }
@@ -74,7 +74,7 @@ nav h1 {
   grid-column: 3/4;
   grid-row: 2/3;
 }
-.calc__buttons .multiply {
+.calc__buttons .multiply__btn {
   grid-column: 4/5;
   grid-row: 2/3;
 }
@@ -90,7 +90,7 @@ nav h1 {
   grid-column: 3/4;
   grid-row: 3/4;
 }
-.calc__buttons .minus {
+.calc__buttons .minus__btn {
   grid-column: 4/5;
   grid-row: 3/4;
 }
@@ -106,7 +106,7 @@ nav h1 {
   grid-column: 3/4;
   grid-row: 4/5;
 }
-.calc__buttons .plus {
+.calc__buttons .plus__btn {
   grid-column: 4/5;
   grid-row: 4/5;
 }
@@ -114,12 +114,13 @@ nav h1 {
   grid-column: 1/3;
   grid-row: 5/6;
   border-radius: 30%;
+  width: 6em;
 }
-.calc__buttons .dot {
+.calc__buttons .decimal__btn {
   grid-column: 3/4;
   grid-row: 5/6;
 }
-.calc__buttons .equals {
+.calc__buttons .equals__btn {
   grid-column: 4/5;
   grid-row: 5/6;
 }
@@ -142,6 +143,8 @@ button {
   padding: 0.8em;
   margin: 0.2em;
   border: 1px solid #1C1C1C;
-  border-radius: 100%;
-  color: white;
+  border-radius: 50%;
+  color: #FFFFFF;
+  width: 3em;
+  height: 3em;
 }
