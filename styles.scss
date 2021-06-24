@@ -1,0 +1,162 @@
+$prm-color: #1C1C1C;
+$sec-color: #FFFFFF;
+$ter-color: #D4D4D2;
+$quat-color: #FF9500;
+$quin-color: #505050;
+
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+nav {
+  text-align: center;
+  width: 100%;
+
+  h1 {
+    font-size: 5em;
+    color: #003366;
+  }
+}
+
+.container__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+  .calculator {
+  background-color: $prm-color;
+  width: 375px;
+  padding: 2em;
+  //flex-basis: 480px;
+
+  .calc__display {
+  background-color: $prm-color;
+  color: $sec-color;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 5em;
+  text-align: right; 
+  }
+}
+  
+  .calc__buttons {
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: repeat (5, 1fr);
+    width: 100%;
+    
+    .c {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .plus-minus {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    .percentage {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+    .divide {
+      grid-column: 4/5;
+      grid-row: 1/2;
+    }
+    .seven {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    .eight {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+    .nine {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+    .multiply {
+      grid-column: 4/5;
+      grid-row: 2/3;
+    }
+    .four {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+    .five {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+    .six {
+      grid-column: 3/4;
+      grid-row: 3/4;
+    }
+    .minus {
+      grid-column: 4/5;
+      grid-row: 3/4;
+    }
+    .one {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+    .two {
+      grid-column: 2/3;
+      grid-row: 4/5;
+    }
+    .three {
+      grid-column: 3/4;
+      grid-row: 4/5;
+    }
+    .plus {
+      grid-column: 4/5;
+      grid-row: 4/5;
+    }
+    .zero {
+      grid-column: 1/3;
+      grid-row: 5/6;
+      border-radius: 30%;
+    }
+    .dot {
+      grid-column: 3/4;
+      grid-row: 5/6;
+    }
+    .equals {
+      grid-column: 4/5;
+      grid-row: 5/6;
+    }
+    .l-grey {
+      background-color: $ter-color;
+      color: $prm-color;
+    };
+    .d-grey {
+      background-color: $quin-color;
+    }
+    .orange {
+      background-color: $quat-color;
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8em;
+    padding: 0.8em;
+    margin: 0.2em;
+    border: 1px solid $prm-color;
+    border-radius: 100%;
+    color: white;
+  }
+       
+     
+
+
+
+
+
+
+
+
+
+
