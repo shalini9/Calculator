@@ -26,11 +26,17 @@ nav h1 {
 }
 .calculator .calc__display {
   background-color: #1C1C1C;
-  color: #FFFFFF;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.calculator .calc__display input {
+  background-color: black;
   padding: 0.5em;
   font-size: 5em;
   text-align: right;
+  width: 100%;
+  color: #FFFFFF;
 }
 
 .calc__buttons {

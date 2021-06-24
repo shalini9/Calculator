@@ -34,11 +34,18 @@ nav {
 
   .calc__display {
   background-color: $prm-color;
-  color: $sec-color;
   width: 100%;
-  padding: 0.5em;
-  font-size: 5em;
-  text-align: right; 
+  display: flex;
+  justify-content: center;
+   
+  input {
+    background-color: black;
+    padding: 0.5em;
+    font-size: 5em;
+    text-align: right;
+    width: 100%; 
+    color: $sec-color;
+  };
   }
 }
   
