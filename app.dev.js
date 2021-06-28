@@ -1,7 +1,5 @@
 "use strict";
 
-function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
-
 var buttons = document.querySelectorAll('button');
 var display = document.querySelector('.display');
 var operationBtns = document.querySelectorAll('.operation__btn');
@@ -16,7 +14,9 @@ var decimalBtn = document.querySelector('.decimal__btn');
 var value = 0;
 
 var displayOnScreen = function displayOnScreen(e) {
-  if (value === 0) {
+  if (e.target.innerHTML === 'C') {
+    return 1;
+  } else if (value === 0) {
     value = e.target.innerHTML;
     display.value = value;
     return value;
@@ -30,28 +30,27 @@ buttons.forEach(function (button) {
   button.addEventListener('click', displayOnScreen);
 });
 clearBtn.addEventListener('click', function () {
-  display.value = 0;
+  display.value = '0';
 });
 equalsBtn.addEventListener('click', function () {
   var splitDisplay = display.value.split('');
   var num1 = splitDisplay[0];
   var operation = splitDisplay[1];
   var num2 = splitDisplay[2];
-
-  _sum(num1, operation, num2);
+  sum(num1, operation, num2);
 });
 
-var _sum = function sum(num1, operation, num2) {
+var sum = function sum(num1, operation, num2) {
   if (operation === '+') {
     console.log(Number(num1) + Number(num2));
-    return num1 + num2;
+    display.value = Number(num1) + Number(num2);
   } else if (operation === '-') {
-    _sum = (_readOnlyError("sum"), num1 - num2);
-  } else if (operation === '*') {
-    _sum = (_readOnlyError("sum"), num1 * num2);
+    display.value = Number(num1) - Number(num2);
+  } else if (operation === 'x') {
+    display.value = Number(num1) * Number(num2);
   } else if (operation === "/") {
-    _sum = (_readOnlyError("sum"), num1 / num2);
+    display.value = Number(num1) / Number(num2);
   }
 
-  return _sum;
+  return sum;
 };

@@ -13,7 +13,9 @@ const decimalBtn = document.querySelector('.decimal__btn');
 let value = 0;
 
 const displayOnScreen = (e) => {
-  if(value === 0) {
+  if(e.target.innerHTML === 'C') {
+    return 1;
+  } else if (value === 0) {
     value = e.target.innerHTML
     display.value = value;
     return value;
@@ -28,7 +30,7 @@ buttons.forEach((button) => {
 })
 
 clearBtn.addEventListener('click', () => {
-  display.value = 0;
+  display.value = '0';
 });
 
 equalsBtn.addEventListener('click', () => {
@@ -44,13 +46,13 @@ equalsBtn.addEventListener('click', () => {
 
   if (operation === '+'){
     console.log(Number(num1) + Number(num2));
-    return num1 + num2;
+    display.value = Number(num1) + Number (num2);
   }else if (operation === '-'){
-    sum = num1 - num2;
-  }else if (operation === '*'){
-    sum = num1 * num2;
+    display.value = Number(num1) - Number(num2);
+  }else if (operation === 'x'){
+    display.value = Number(num1) * Number(num2);
   }else if (operation === "/"){
-    sum = num1 / num2;
+    display.value = Number(num1) / Number(num2);
    }
   return sum; 
 }
